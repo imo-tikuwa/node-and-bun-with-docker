@@ -1,0 +1,16 @@
+services:
+  node:
+    build:
+      context: ./
+      dockerfile: ./.docker/node/Dockerfile
+    volumes:
+      - ./node_app:/app:cached
+    tty: true
+
+  bun:
+    build:
+      context: ./
+      dockerfile: ./.docker/bun/Dockerfile
+    volumes:
+      - ./bun_app:/app:cached
+    tty: true
