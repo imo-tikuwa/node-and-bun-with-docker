@@ -6,3 +6,5 @@ WORKDIR /app
 
 # uid=1000
 USER bun
+
+CMD ["sh"]
