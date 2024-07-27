@@ -5,6 +5,9 @@ services:
       dockerfile: ./.docker/node/Dockerfile
     volumes:
       - ./node_app:/app:cached
+    ports:
+      - "3000:3000"
+      - "24678:24678"
     tty: true
 
   bun:
@@ -13,4 +16,7 @@ services:
       dockerfile: ./.docker/bun/Dockerfile
     volumes:
       - ./bun_app:/app:cached
+    ports:
+      - "3001:3000"
+      - "24679:24678"
     tty: true
